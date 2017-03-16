@@ -1,9 +1,12 @@
-ASN1SCC="/appli/asn1scc-3.2.80/Asn1f2.exe"
+ASN1SCC="/home/daniel/git/asn1-showcase/asn1scc/asn1.exe"
 OUT="output"
 ASN_SRCS=sample.asn
 ACN_SRCS=sample.acn
 DEP_ASN_SRCS+=$(wildcard $(1)/asn1/*.asn1) 
 DEP_ACN_SRCS+=$(wildcard $(1)/asn1/*.acn)
+
+
+all: per, acn
 
 per:
 	@echo "Generating source code and runtime libs using uPER"

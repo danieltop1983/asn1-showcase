@@ -5,7 +5,6 @@ ACN_SRCS=sample.acn
 DEP_ASN_SRCS+=$(wildcard $(1)/asn1/*.asn1) 
 DEP_ACN_SRCS+=$(wildcard $(1)/asn1/*.acn)
 
-
 per:
 	@echo "Generating source code and runtime libs using uPER"
 	$(ASN1SCC) -c $(ASN_SRCS) -uPER -o $(OUT)
@@ -21,7 +20,9 @@ allacn: acn obj
 
 allper: per obj
 
-all: allacn allper
+all1: allacn allper
+
+all: allacn
 
 clean:
 	cd $(OUT); rm -rf *

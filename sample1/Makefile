@@ -16,7 +16,7 @@ acn:
 lib:
 	cd $(OUT); gcc -c -I . *.c
 	
-allacn: acn lib
+allacn: clean acn lib
 
 allper: per lib
 
@@ -27,4 +27,4 @@ all: allacn
 clean:
 	cd $(OUT); rm -rf *
 
-.PHONY: doc-gen src-gen lib test-gen test test-run test-clean clear-tmp clean comp comp-clean
+.PHONY: per acn lib allacn allper all1 all clean

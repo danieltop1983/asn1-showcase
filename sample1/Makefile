@@ -13,12 +13,12 @@ acn:
 	@echo "Generating source code and runtime libs using ACN"
 	$(ASN1SCC) -c $(ASN_SRCS) -ACN $(ACN_SRCS) -atc -o $(OUT)
 	
-obj:
+lib:
 	cd $(OUT); gcc -c -I . *.c
 	
-allacn: acn obj
+allacn: acn lib
 
-allper: per obj
+allper: per lib
 
 all1: allacn allper
 

@@ -1,11 +1,12 @@
 
 MYMOD DEFINITIONS AUTOMATIC TAGS::= BEGIN
 
-MyInt ::= INTEGER (-100 .. 100)
+MyInt ::= INTEGER (-100 .. 100) /* MyInt */
 
-MySeq ::= SEQUENCE {
-  a1 INTEGER (1..20),
-  a2 INTEGER (-10 .. 20),
-  a3 MyInt
+MySeq ::= SEQUENCE 
+{
+  a1 INTEGER (1..20),         /* a1 */
+  a2 INTEGER (-10 .. 20),	  /* a2 */
+  a3 MyInt                    /* a3 */
 }
 END

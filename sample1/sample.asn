@@ -5,10 +5,10 @@ MyInt ::= INTEGER (-100 .. 100) /* MyInt */
 
 RGB ::= ENUMERATED 
 {
-red (1),
-green (2),
-blue (3),
-yellow (4)
+red (100),
+green (200),
+blue (300),
+yellow (400)
 }
 
 
@@ -16,7 +16,6 @@ yellow (4)
 MyColor ::= SEQUENCE 
 {
   a3 MyInt,                   /* a3 */
-  
   colorData CHOICE 
   {
   red INTEGER(1..10),

@@ -17,8 +17,7 @@ RGB[]
 MyColor [] 
 {
 a3 [],
-det RGB [],
-colorData [determinant det]
+colorData []
 }
 
 END

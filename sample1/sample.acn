@@ -10,13 +10,14 @@ CONSTANT LARGEST-INT ::= 2^^(WORDSIZE - 1)-1
 --Size will be 1 byte
 MyInt[size 8, encoding twos-complement]
 
+RGB[]
+
 -- encoding properties for types defined
 -- within constructed types (i.e. fields)
-MySeq [] 
+MyColor [] 
 {
-a1 [],
-a2 [size 32, encoding twos-complement, endianness little],
-a3 []
+a3 [],
+colorData []
 }
 
 END

@@ -15,9 +15,8 @@ acn:
 
 ada:
 	@echo "Generating source code and runtime libs using ACN"
-	$(ASN1SCC) -Ada $(ASN_SRCS) -ACN $(ACN_SRCS) -o $(OUT)
+	$(ASN1SCC) -Ada $(ASN_SRCS) -ACN $(ACN_SRCS) -atc -equal -o $(OUT)
 
-	
 lib:
 	cd $(OUT); gcc -c -I . *.c
 	

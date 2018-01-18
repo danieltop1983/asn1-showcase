@@ -1,7 +1,7 @@
 
 MYMOD DEFINITIONS AUTOMATIC TAGS::= BEGIN
 
-MyInt ::= INTEGER (-100 .. 100) /* MyInt */
+MyInt ::= INTEGER (0 .. 99) /* MyInt */
 
 RGB ::= ENUMERATED 
 {

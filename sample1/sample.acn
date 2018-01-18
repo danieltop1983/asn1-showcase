@@ -8,7 +8,7 @@ CONSTANT LARGEST-INT ::= 2^^(WORDSIZE - 1)-1
 
 --MyInt will be encoded as twos complement integer.
 --Size will be 1 byte
-MyInt[size 8, encoding twos-complement]
+MyInt[size 8, encoding BCD]
 
 RGB[]
 

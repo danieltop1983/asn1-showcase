@@ -1,4 +1,4 @@
-ASN1SCC="/home/daniel/git/asn1-showcase/asn1scc/asn1.exe"
+ASN1SCC="/home/daniel/Downloads/asn1scc/asn1.exe"
 OUT="output"
 ASN_SRCS=sample.asn
 ACN_SRCS=sample.acn
@@ -12,6 +12,11 @@ per:
 acn:
 	@echo "Generating source code and runtime libs using ACN"
 	$(ASN1SCC) -c $(ASN_SRCS) -ACN $(ACN_SRCS) -atc -o $(OUT)
+
+ada:
+	@echo "Generating source code and runtime libs using ACN"
+	$(ASN1SCC) -Ada $(ASN_SRCS) -ACN $(ACN_SRCS) -o $(OUT)
+
 	
 lib:
 	cd $(OUT); gcc -c -I . *.c
